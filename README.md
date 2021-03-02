@@ -4,6 +4,13 @@
 - `路由规则：` http://localhost:5555/{服务名}/{路径}
 - `路由示例：` http://localhost:5555/demo2/health http://localhost:5555/demo1/health
 
+
+#### 版本依赖
+- `Jdk` 1.8 及以上
+- `Spring Boot` 2.3.9.RELEASE
+- `Spring Cloud` Hoxton.SR10
+
+
 #### 编译打包
 
 ```shell
