@@ -1,3 +1,6 @@
+server:
+  port: 5555
+
 spring:
   application:
     # 指定注册到eureka server上的服务名称
