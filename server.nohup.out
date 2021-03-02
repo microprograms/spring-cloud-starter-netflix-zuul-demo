@@ -7,310 +7,1180 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.9.RELEASE)
 
-2021-03-02 11:32:56.798  INFO 24991 --- [           main] ngCloudStarterNetflixZuulDemoApplication : No active profile set, falling back to default profiles: default
-2021-03-02 11:33:03.780  WARN 24991 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2021-03-02 11:33:03.852  WARN 24991 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
-2021-03-02 11:33:04.483  INFO 24991 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2e76996e-6a17-3f4e-a623-8a0410a5f695
-2021-03-02 11:33:07.096  INFO 24991 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
-2021-03-02 11:33:07.150  INFO 24991 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-02 11:33:07.152  INFO 24991 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-03-02 11:33:07.464  INFO 24991 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-02 11:33:07.465  INFO 24991 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10520 ms
-2021-03-02 11:33:07.989  WARN 24991 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-03-02 11:33:07.989  INFO 24991 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-03-02 11:33:08.046  INFO 24991 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7fe083b1
-2021-03-02 11:33:09.179  INFO 24991 --- [           main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
-2021-03-02 11:33:09.475  WARN 24991 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-03-02 11:33:09.479  INFO 24991 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-03-02 11:33:11.519  INFO 24991 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 11:33:12.898  INFO 24991 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2021-03-02 11:33:13.495  WARN 24991 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2021-03-02 11:33:14.444  INFO 24991 --- [           main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
-2021-03-02 11:33:14.524  INFO 24991 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2021-03-02 11:33:14.749  INFO 24991 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-03-02 11:33:15.219  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-03-02 11:33:15.571  INFO 24991 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-03-02 11:33:15.572  INFO 24991 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-03-02 11:33:16.483  INFO 24991 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-03-02 11:33:16.486  INFO 24991 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-03-02 11:33:17.686  INFO 24991 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-03-02 11:33:17.791  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-03-02 11:33:17.792  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-03-02 11:33:17.792  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-03-02 11:33:17.793  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-03-02 11:33:17.793  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-03-02 11:33:17.793  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-03-02 11:33:17.794  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-03-02 11:33:18.067  INFO 24991 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:password@localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
-	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
-	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
-	at com.sun.jersey.api.client.Client.handle(Client.java:652)
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
-	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
-	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:196)
-	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:167)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:316)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:363)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$d7a90bc2.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
-	at com.github.microprograms.spring_cloud_starter_netflix_zuul_demo.SpringCloudStarterNetflixZuulDemoApplication.main(SpringCloudStarterNetflixZuulDemoApplication.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
-	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
-	... 83 more
+2021-03-02 11:52:36.283  INFO 26226 --- [           main] ngCloudStarterNetflixZuulDemoApplication : No active profile set, falling back to default profiles: default
+2021-03-02 11:52:38.906  WARN 26226 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-03-02 11:52:38.940  WARN 26226 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2021-03-02 11:52:39.247  INFO 26226 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2e76996e-6a17-3f4e-a623-8a0410a5f695
+2021-03-02 11:52:40.477  INFO 26226 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2021-03-02 11:52:40.503  INFO 26226 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-02 11:52:40.504  INFO 26226 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 11:52:40.653  INFO 26226 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-02 11:52:40.654  INFO 26226 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4249 ms
+2021-03-02 11:52:40.909  WARN 26226 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-03-02 11:52:40.909  INFO 26226 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-02 11:52:40.937  INFO 26226 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@23c388c2
+2021-03-02 11:52:41.441  INFO 26226 --- [           main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2021-03-02 11:52:41.568  WARN 26226 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-03-02 11:52:41.568  INFO 26226 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-02 11:52:42.231  INFO 26226 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 11:52:43.088  INFO 26226 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-03-02 11:52:43.361  WARN 26226 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-03-02 11:52:43.911  INFO 26226 --- [           main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2021-03-02 11:52:43.950  INFO 26226 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2021-03-02 11:52:44.023  INFO 26226 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-03-02 11:52:44.160  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-03-02 11:52:44.281  INFO 26226 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-03-02 11:52:44.282  INFO 26226 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-03-02 11:52:44.557  INFO 26226 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-03-02 11:52:44.558  INFO 26226 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-03-02 11:52:44.909  INFO 26226 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 11:52:44.967  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-03-02 11:52:44.968  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-03-02 11:52:44.969  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-03-02 11:52:44.969  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-03-02 11:52:44.969  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-03-02 11:52:44.969  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-03-02 11:52:44.969  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-03-02 11:52:45.574  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-03-02 11:52:45.581  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-03-02 11:52:45.586  INFO 26226 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-03-02 11:52:45.595  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1614657165593 with initial instances count: 3
+2021-03-02 11:52:45.602  INFO 26226 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ZUUL-DEMO with eureka with status UP
+2021-03-02 11:52:45.603  INFO 26226 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1614657165603, current=UP, previous=STARTING]
+2021-03-02 11:52:45.609  INFO 26226 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZUUL-DEMO/127.0.0.1:zuul-demo:5555:v1.0.0: registering service...
+2021-03-02 11:52:45.780  INFO 26226 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZUUL-DEMO/127.0.0.1:zuul-demo:5555:v1.0.0 - registration status: 204
+2021-03-02 11:52:45.861  INFO 26226 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2021-03-02 11:52:45.864  INFO 26226 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5555
+2021-03-02 11:52:45.909  INFO 26226 --- [           main] ngCloudStarterNetflixZuulDemoApplication : Started SpringCloudStarterNetflixZuulDemoApplication in 12.611 seconds (JVM running for 13.89)
+2021-03-02 11:53:32.091  INFO 26226 --- [nio-5555-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-02 11:53:32.093  INFO 26226 --- [nio-5555-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-02 11:53:32.174  INFO 26226 --- [nio-5555-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 81 ms
+2021-03-02 11:53:32.964  INFO 26226 --- [nio-5555-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo2.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 11:53:33.114  INFO 26226 --- [nio-5555-exec-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-demo2
+2021-03-02 11:53:33.115  INFO 26226 --- [nio-5555-exec-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: demo2 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo2,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-03-02 11:53:33.172  INFO 26226 --- [nio-5555-exec-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2021-03-02 11:53:33.245  INFO 26226 --- [nio-5555-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo2.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 11:53:33.250  INFO 26226 --- [nio-5555-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client demo2 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo2,current list of Servers=[127.0.0.1:9852],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:127.0.0.1:9852;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@7cd380c
+2021-03-02 11:53:33.287  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo2 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 11:53:34.181  INFO 26226 --- [erListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo2.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 11:53:44.857  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo2 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 11:53:46.057  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo2 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 11:53:46.909  WARN 26226 --- [nio-5555-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo2 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 11:54:13.608  WARN 26226 --- [nio-5555-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo2 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 11:57:44.999  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:15:33.144  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:20:33.159  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:22:51.519  WARN 26226 --- [nio-5555-exec-7] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:22:55.000  WARN 26226 --- [nio-5555-exec-9] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:22:56.072  WARN 26226 --- [io-5555-exec-10] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:22:57.574  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:22:58.637  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:22:59.444  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:23:16.193  INFO 26226 --- [nio-5555-exec-4] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo1.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 13:23:16.205  INFO 26226 --- [nio-5555-exec-4] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-demo1
+2021-03-02 13:23:16.206  INFO 26226 --- [nio-5555-exec-4] c.netflix.loadbalancer.BaseLoadBalancer  : Client: demo1 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo1,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-03-02 13:23:16.214  INFO 26226 --- [nio-5555-exec-4] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2021-03-02 13:23:16.219  INFO 26226 --- [nio-5555-exec-4] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo1.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 13:23:16.221  INFO 26226 --- [nio-5555-exec-4] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client demo1 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo1,current list of Servers=[127.0.0.1:6963],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:127.0.0.1:6963;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@37c4569a
+2021-03-02 13:23:16.256  WARN 26226 --- [nio-5555-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:23:17.217  INFO 26226 --- [erListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: demo1.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-02 13:24:43.730  WARN 26226 --- [nio-5555-exec-7] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:44.806  WARN 26226 --- [nio-5555-exec-8] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:45.683  WARN 26226 --- [nio-5555-exec-9] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:46.464  WARN 26226 --- [io-5555-exec-10] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:47.156  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:47.891  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:48.586  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:49.320  WARN 26226 --- [nio-5555-exec-4] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:49.954  WARN 26226 --- [nio-5555-exec-5] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:51.695  WARN 26226 --- [nio-5555-exec-6] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:53.142  WARN 26226 --- [nio-5555-exec-7] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:53.990  WARN 26226 --- [nio-5555-exec-8] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:24:54.737  WARN 26226 --- [nio-5555-exec-9] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:25:05.330  WARN 26226 --- [io-5555-exec-10] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:25:05.426  WARN 26226 --- [io-5555-exec-10] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
 
-2021-03-02 11:33:18.068  WARN 24991 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
-2021-03-02 11:33:18.070  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZUUL-DEMO/127.0.0.1:zuul-demo:5555:v1.0.0 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:316)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:363)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$d7a90bc2.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
-	at com.github.microprograms.spring_cloud_starter_netflix_zuul_demo.SpringCloudStarterNetflixZuulDemoApplication.main(SpringCloudStarterNetflixZuulDemoApplication.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
-
-2021-03-02 11:33:18.072  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2021-03-02 11:33:18.073  WARN 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2021-03-02 11:33:18.076  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2021-03-02 11:33:18.082  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2021-03-02 11:33:18.095  INFO 24991 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-03-02 11:33:18.129  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1614655998125 with initial instances count: 0
-2021-03-02 11:33:18.146  INFO 24991 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ZUUL-DEMO with eureka with status UP
-2021-03-02 11:33:18.151  INFO 24991 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1614655998150, current=UP, previous=STARTING]
-2021-03-02 11:33:18.161  INFO 24991 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZUUL-DEMO/127.0.0.1:zuul-demo:5555:v1.0.0: registering service...
-2021-03-02 11:33:18.196  INFO 24991 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:password@localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
-	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
-	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
-	at com.sun.jersey.api.client.Client.handle(Client.java:652)
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
-	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
-	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
-	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
-	... 29 more
-
-2021-03-02 11:33:18.196  WARN 24991 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
-2021-03-02 11:33:18.215  WARN 24991 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZUUL-DEMO/127.0.0.1:zuul-demo:5555:v1.0.0 - registration failed Cannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
 
-2021-03-02 11:33:18.217  WARN 24991 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2021-03-02 13:25:07.693  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:25:07.700  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
 
-2021-03-02 11:33:18.355  INFO 24991 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
-2021-03-02 11:33:18.359  INFO 24991 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5555
-2021-03-02 11:33:18.468  INFO 24991 --- [           main] ngCloudStarterNetflixZuulDemoApplication : Started SpringCloudStarterNetflixZuulDemoApplication in 31.067 seconds (JVM running for 33.9)
+2021-03-02 13:25:08.518  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:25:08.523  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
+
+2021-03-02 13:25:09.307  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:25:09.313  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
+
+2021-03-02 13:25:33.172  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:25:33.877  WARN 26226 --- [nio-5555-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:25:40.371  WARN 26226 --- [nio-5555-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:26:16.177  WARN 26226 --- [nio-5555-exec-6] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:27:57.444  WARN 26226 --- [nio-5555-exec-8] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:28:27.955  WARN 26226 --- [nio-5555-exec-9] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:28:28.892  WARN 26226 --- [io-5555-exec-10] o.s.c.n.z.f.pre.PreDecorationFilter      : No route found for uri: /demo1/health
+2021-03-02 13:28:44.163  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:28:44.187  WARN 26226 --- [nio-5555-exec-1] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
+
+2021-03-02 13:28:45.029  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:28:45.034  WARN 26226 --- [nio-5555-exec-2] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
+
+2021-03-02 13:28:46.617  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:28:46.621  WARN 26226 --- [nio-5555-exec-3] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: Forwarding error
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.handleException(RibbonRoutingFilter.java:198) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:173) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.run(RibbonRoutingFilter.java:119) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.FilterProcessor.route(FilterProcessor.java:118) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.ZuulRunner.route(ZuulRunner.java:96) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.route(ZuulServlet.java:116) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:81) ~[zuul-core-1.3.1.jar!/:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar!/:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.9.RELEASE.jar!/:2.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar!/:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: demo1
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:483) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar!/:2.3.0]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:221) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand.run(AbstractRibbonCommand.java:55) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.internal.operators.BlockingOperatorToFuture.toFuture(BlockingOperatorToFuture.java:51) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at rx.observables.BlockingObservable.toFuture(BlockingObservable.java:410) ~[rxjava-1.3.8.jar!/:1.3.8]
+	at com.netflix.hystrix.HystrixCommand.queue(HystrixCommand.java:378) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at com.netflix.hystrix.HystrixCommand.execute(HystrixCommand.java:344) ~[hystrix-core-1.5.18.jar!/:1.5.18]
+	at org.springframework.cloud.netflix.zuul.filters.route.RibbonRoutingFilter.forward(RibbonRoutingFilter.java:167) ~[spring-cloud-netflix-zuul-2.2.7.RELEASE.jar!/:2.2.7.RELEASE]
+	... 55 common frames omitted
+
+2021-03-02 13:28:48.591  WARN 26226 --- [nio-5555-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 10000ms for the command demo1 is set lower than the combination of the Ribbon read and connect timeout, 40000ms.
+2021-03-02 13:30:33.185  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:35:33.203  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:40:33.217  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-03-02 13:45:33.233  INFO 26226 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
